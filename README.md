@@ -82,13 +82,13 @@ All experiments were executed programmatically through Python scripts rather tha
 
 Run Stage 1 over a set of screenshots:
 
-```bash
-python benchmark_ocr_vision.py \
-  --input-dir "./bms_ocr_eval/test_images" \
-  --output "./bms_ocr_eval/test_outputs_gemma27b.jsonl" \
-  --prompt-file "./prompts/stage1/bms_ocr_prompt.txt" \
-  --raw-dir "./bms_ocr_eval/test_raw_outputs_gemma27b" \
-  --max-tokens 6000
+    python benchmark_ocr_vision.py \
+      --input-dir "./bms_ocr_eval/test_images" \
+      --output "./bms_ocr_eval/test_outputs_gemma27b.jsonl" \
+      --prompt-file "./prompts/stage1/bms_ocr_prompt.txt" \
+      --raw-dir "./bms_ocr_eval/test_raw_outputs_gemma27b" \
+      --max-tokens 6000
+
 ### 2. Stage 1 Evaluation
 
 Strict evaluation:
