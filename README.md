@@ -76,6 +76,20 @@ The paper reports results for the following final setup:
 
 All experiments were executed programmatically through Python scripts rather than through an interactive chat interface, to ensure consistent inference settings and output collection.
 
+## Environment
+
+The scripts assume a locally served OpenAI-compatible LM Studio endpoint. Example environment variables for Stage 1 are:
+
+    export LMSTUDIO_BASE_URL="http://127.0.0.1:1234/v1"
+    export LMSTUDIO_API_KEY="lm-studio"
+    export LMSTUDIO_MODEL="gemma-3-27b-it"
+
+For Stage 2, set the model variable to the reasoning model used in the paper, for example:
+
+    export LMSTUDIO_MODEL="ministral-3-14b-reasoning"
+
+The `LMSTUDIO_BASE_URL` and `LMSTUDIO_API_KEY` variables affect execution and should be set explicitly. The value `lm-studio` is the standard local placeholder key used by LM Studio and is not a secret. If your local setup uses a different exact Stage 2 model string, replace the example above with the model name exposed by your LM Studio installation.
+
 ## Expected Workflow
 
 ### 1. Stage 1: OCR / Structured Visual Extraction
