@@ -78,17 +78,17 @@ All experiments were executed programmatically through Python scripts rather tha
 
 ## Environment
 
-The scripts assume a locally served OpenAI-compatible LM Studio endpoint. Example environment variables for Stage 1 are:
+The scripts assume a locally served OpenAI-compatible LM Studio endpoint. A common default configuration is:
 
     export LMSTUDIO_BASE_URL="http://127.0.0.1:1234/v1"
     export LMSTUDIO_API_KEY="lm-studio"
     export LMSTUDIO_MODEL="gemma-3-27b-it"
 
-For Stage 2, set the model variable to the reasoning model used in the paper, for example:
+For Stage 2, set the model variable to the reasoning model used in the paper:
 
     export LMSTUDIO_MODEL="ministral-3-14b-reasoning"
 
-The `LMSTUDIO_BASE_URL` and `LMSTUDIO_API_KEY` variables affect execution and should be set explicitly. The value `lm-studio` is the standard local placeholder key used by LM Studio and is not a secret. If your local setup uses a different exact Stage 2 model string, replace the example above with the model name exposed by your LM Studio installation.
+The `LMSTUDIO_BASE_URL` and `LMSTUDIO_API_KEY` variables affect execution and should be set explicitly. If your LM Studio server is running on a different host or port, replace `LMSTUDIO_BASE_URL` with the endpoint used in your local setup. The value `lm-studio` is the standard local placeholder key used by LM Studio and is not a secret. If your local setup uses a different exact Stage 2 model string, replace the example above with the model name exposed by your LM Studio installation.
 
 ## Expected Workflow
 
