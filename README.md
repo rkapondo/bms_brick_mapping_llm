@@ -7,7 +7,7 @@ This repository contains the code, prompts and selected experimental artifacts f
 The pipeline separates screenshot interpretation from semantic reasoning into two sequential stages:
 
 1. **Stage 1: Structured Visual Extraction**  
-   A vision-capable model extracts visible point identifiers, values, units, and related visual cues from BMS screenshots and returns them in a normalized JSON format.
+   A vision-capable model extracts visible point identifiers, values, units and related visual cues from BMS screenshots and returns them in a normalized JSON format.
 
 2. **Stage 2: Ontology-Grounded Semantic Reasoning**  
    A reasoning-focused model maps the extracted point records to Brick-compatible classes. This stage can be run either:
