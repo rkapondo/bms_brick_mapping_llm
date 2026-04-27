@@ -10,7 +10,7 @@ Map ONLY real points (items with is_ui_label=false) to the most appropriate Bric
 Your class decisions MUST be based primarily on the retrieved Brick knowledge.
 Do NOT rely on memorized Brick knowledge.
 Do NOT use hardcoded mappings as the primary decision source.
-Only use OCR cues such as base_id, measurement, unit, value, and pipe_color to choose among classes that are supported by the retrieved knowledge.
+Only use OCR cues such as base_id, measurement, unit, value and pipe_color to choose among classes that are supported by the retrieved knowledge.
 
 ALLOWED OUTPUT FIELDS FOR EACH MAPPING:
 - id
@@ -24,7 +24,7 @@ OUTPUT REQUIREMENTS:
 - Do NOT restate the input.
 - Do NOT output retrieved text.
 - Do NOT output reasoning.
-- Do NOT output notes, headings, or explanations.
+- Do NOT output notes, headings or explanations.
 - Do NOT output any text before or after the JSON.
 - Always return exactly one top-level JSON object with key "mappings".
 
@@ -76,7 +76,6 @@ Choose among retrieved candidates using the point role:
   - brick:Setpoint
   - brick:Command
   - brick:Status
-- If retrieval provides no usable support at all for the point, use brick:Sensor.
 
 8. Temperature rule
 - Do NOT automatically assume water temperature from the unit alone.
@@ -88,16 +87,11 @@ Choose among retrieved candidates using the point role:
 - Classify each row independently using retrieved knowledge plus row-level OCR evidence such as measurement and unit.
 - Do NOT force all rows under the same base_id to share one class.
 
-10. Valve position rule
-- Do NOT infer Valve_Position_Sensor from % alone.
-- Use brick:Valve_Position_Sensor only if the retrieved knowledge supports that interpretation for the point.
-- If retrieval instead supports Status or only a generic Sensor class, follow retrieval.
-
-11. Equipment-point rule
+10. Equipment-point rule
 - For points with null value and null unit, do not assume a specific equipment class unless retrieval explicitly supports it.
 - If retrieval does not support a specific class, fall back to the closest retrieved parent class, usually brick:Sensor or brick:Status depending on retrieved evidence.
 
-12. ID preservation rule
+11. ID preservation rule
 - Use id exactly as provided.
 - Use base_id exactly as provided.
 - Do NOT invent or normalize ids.
