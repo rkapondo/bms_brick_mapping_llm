@@ -304,7 +304,7 @@ def lookup_property_in_brick(col, property_name: str) -> List[Tuple[str, Dict]]:
 
     hits = []
 
-    # 🔥 IMPORTANT: search only local name (after colon)
+    # IMPORTANT: search only local name (after colon)
     local_name = property_name.split(":")[-1].lower()
 
     for text, meta in zip(docs, metas):
@@ -541,11 +541,11 @@ if __name__ == "__main__":
     index_brick_docs_web_if_needed(brick_docs_col, st_model, BRICK_DOCS_URLS)
 
     if brick_col is not None:
-        print("Brick ontology collection loaded ✅")
+        print("Brick ontology collection loaded")
     else:
-        print("Brick ontology collection not found (run ingest_brick.py) ⚠️")
+        print("Brick ontology collection not found (run ingest_brick.py)")
 
-    print("Brick docs web collection loaded ✅")
+    print("Brick docs web collection loaded")
     print("\nRAG ready. Ask a question (Ctrl+C to exit).\n")
 
     while True:
@@ -576,10 +576,10 @@ if __name__ == "__main__":
                         {"source": str(brick_path), "collection": "data"}
                     )]
 
-                    # 1️⃣ Increase web retrieval for richer explanation
+                    # 1. Increase web retrieval for richer explanation
                     retrieved += retrieve(brick_docs_col, st_model, q, top_k=6)
 
-                    # 2️⃣ Add one targeted relationship example query
+                    # 2. Add one targeted relationship example query
                     local_name = prop.split(":")[-1]
                     retrieved += retrieve(
                         brick_docs_col,
