@@ -15,6 +15,7 @@ ALLOWED_CLASSES = {
     "brick:Status",
     "brick:Temperature_Sensor",
     "brick:Water_Temperature_Sensor",
+    "brick:Outdoor_Temperature_Sensor",
     "brick:Flow_Sensor",
     "brick:Pressure_Sensor",
     "brick:Energy_Sensor",
