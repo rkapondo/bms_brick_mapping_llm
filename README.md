@@ -1,6 +1,6 @@
 # Two-Stage LLM Pipeline for Brick Mapping from BMS Screenshots
 
-This repository contains the code, prompts, and selected experimental artifacts for a two-stage large language model pipeline for Brick class identification from Building Management System (BMS) screenshots.
+This repository contains the code, prompts and selected experimental artifacts for a two-stage large language model pipeline for Brick class identification from Building Management System (BMS) screenshots.
 
 ## Overview
 
