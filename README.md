@@ -11,10 +11,10 @@ The pipeline separates screenshot interpretation from semantic reasoning into tw
 
 2. **Stage 2: Ontology-Grounded Semantic Reasoning**  
    A reasoning-focused model maps the extracted point records to Brick-compatible classes. This stage can be run either:
-   - **without retrieval augmentation**, or
+   - **without retrieval augmentation** or
    - **with retrieval augmentation (RAG)** using curated Brick ontology documentation.
 
-This staged design makes the pipeline more auditable and easier to evaluate, since visual extraction errors can be separated from semantic classification errors.
+This staged design makes the pipeline more auditable and easier to evaluate since visual extraction errors can be separated from semantic classification errors.
 
 ## Repository Contents
 
