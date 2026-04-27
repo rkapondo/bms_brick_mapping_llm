@@ -17,26 +17,20 @@ Output requirements:
 - Do NOT restate the input.
 - Do NOT output retrieval text.
 - Do NOT output reasoning.
-- Do NOT output notes, headings, or explanations.
+- Do NOT output notes, headings or explanations.
 - Do NOT output any text before or after the JSON.
 - Always return exactly one top-level JSON object with key "mappings".
 
 Classification rules:
 - Ignore all items where is_ui_label=true.
 - For each remaining item, output exactly one mapping.
-- brick_class must be a valid Brick class in CURIE form, e.g. brick:Water_Temperature_Sensor.
+- brick_class must be a valid Brick class in CURIE form e.g. brick:Water_Temperature_Sensor.
 - Choose the most specific valid class supported by the retrieved Brick knowledge.
 - If the point reads a physical quantity, prefer a Sensor class.
 - If the point is a target value, prefer a Setpoint class.
 - If the point sends a control signal, prefer a Command class.
 - If the point reports operating state, prefer a Status class.
-- If the selected class is a temperature sensor and pipe_color is purple, orange, red, or blue, prefer brick:Water_Temperature_Sensor when supported.
-- If no exact match is available, fall back to one of:
-  - brick:Sensor
-  - brick:Setpoint
-  - brick:Command
-  - brick:Status
-- If the role cannot be inferred, use brick:Sensor.
+- If the selected class is a temperature sensor and pipe_color is purple, orange, red or blue, prefer brick:Water_Temperature_Sensor when supported.
 - Use the id exactly as provided.
 - Use the base_id exactly as provided.
 
