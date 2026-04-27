@@ -168,7 +168,7 @@ The relaxed metric better reflects extraction utility for downstream semantic re
 
 ### Stage 2
 
-Stage 2 is evaluated using precision, recall, and F1 for point-level Brick-compatible class assignment under:
+Stage 2 is evaluated using precision, recall and F1 for point-level Brick-compatible class assignment under:
 - **ground-truth OCR input**
 - **generated OCR input**
 - **without RAG**
