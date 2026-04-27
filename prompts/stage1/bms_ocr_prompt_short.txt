@@ -17,7 +17,7 @@ Return exactly one JSON object in this schema:
       "id": "1",
       "base_id": "...",
       "measurement": "...",
-      "pipe_color": "purple|orange|red|green|blue|yellow|brown|turquoise|null",
+      "pipe_colour": "purple|orange|red|green|blue|yellow|brown|turquoise|null",
       "is_ui_label": true,
       "value": "...",
       "unit": "°C|bar|%|kWh|MWh|Wh|m3|m³|m3/h|m³/h|kW|l/tim|null"
@@ -31,7 +31,7 @@ Rules:
 - Do not merge repeated readings.
 - One visible reading = one item.
 - Preserve text exactly as printed.
-- Do not normalize text.
+- Do not normalise text.
 - Preserve case, punctuation, spaces, commas, dots, hyphens, and Swedish text exactly.
 - Preserve confusing strings exactly, including:
   - GT vs QT
@@ -98,9 +98,9 @@ Floating value rule:
 - A floating value like "40.6 °C" or "19.7 %" is UI text unless it is clearly part of a physical anchored device or meter block.
 
 pipe_color rules:
-- If is_ui_label = true, then pipe_color = null.
-- If is_ui_label = false, assign pipe_color only from the colored pipe segment physically touched by the anchor.
-- Do not assign color from nearby text.
+- If is_ui_label = true, then pipe_colour = null.
+- If is_ui_label = false, assign pipe_colour only from the colored pipe segment physically touched by the anchor.
+- Do not assign colour from nearby text.
 - If no anchor-to-pipe contact is clear, use null.
 
 Special rule:
@@ -115,6 +115,6 @@ Final checks before output:
 - Full identifiers preserved in base_id
 - measurement never contains tag fragments
 - measurement never contains full numeric strings with units
-- UI labels have pipe_color = null
+- UI labels have pipe_colour = null
 
 Output one JSON object only.
