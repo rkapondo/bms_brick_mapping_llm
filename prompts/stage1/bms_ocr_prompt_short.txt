@@ -39,7 +39,6 @@ Rules:
   - SV vs VX
   - VMM vs VVM
   - VV01 vs VP01 vs VS01
-  - l/tim exactly
 
 Identifier rules:
 - Full printed tags must remain intact in base_id.
