@@ -15,7 +15,7 @@ For each image, output one JSON object in exactly this structure:
       "id": "1",
       "base_id": "...",
       "measurement": "...",
-      "pipe_color": "purple|orange|red|green|blue|yellow|brown|turquoise|null",
+      "pipe_colour": "purple|orange|red|green|blue|yellow|brown|turquoise|null",
       "is_ui_label": true,
       "value": "...",
       "unit": "°C|bar|%|kWh|MWh|Wh|m3|m³|m3/h|m³/h|kW|l/tim|null"
@@ -243,15 +243,15 @@ FLOATING VALUE BOX RULE
 - If the visible text is only a value box like "40.6 °C" or "19.7 %" and no printed physical point tag is attached to it, treat it as UI text.
 - If a value is clearly one row of a real meter/device block, use the parent meter/device base_id instead.
 
-pipe_color
+pipe_colour
 
 When is_ui_label=true:
-- pipe_color must be null
+- pipe_colour must be null
 
 When is_ui_label=false:
 - Determine pipe_color only from the thick colored pipe segment that the anchor physically touches.
-- Do not infer color from nearby text.
-- Do not infer color from the general area.
+- Do not infer colour from nearby text.
+- Do not infer colour from the general area.
 - If no anchor touches a colored pipe segment unambiguously, use null.
 
 Allowed values:
@@ -267,7 +267,7 @@ Allowed values:
 
 CRITICAL PIPE COLOR RULE
 - If the item is floating text or a UI box, pipe_color must be null.
-- If the item is a real meter block row, use the parent device/meter anchor color if clearly visible; otherwise null.
+- If the item is a real meter block row, use the parent device/meter anchor colour if clearly visible; otherwise null.
 
 SPECIAL RULE FOR VALVES/CONTROLLERS/EQUIPMENT
 Do not miss items that have:
@@ -292,7 +292,7 @@ Check all of the following:
 9. Full identifiers remain intact in base_id.
 10. Measurement never contains part of a tag.
 11. Measurement never contains a full numeric string with unit.
-12. UI labels have pipe_color = null.
+12. UI labels have pipe_colour = null.
 13. Floating text without anchor is not assigned a pipe_color.
 
 Output one JSON object only.
