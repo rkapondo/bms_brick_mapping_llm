@@ -10,7 +10,7 @@ Map ONLY real points (items with is_ui_label=false) to the most appropriate Bric
 Your class decisions MUST be based primarily on the retrieved Brick knowledge.
 Do NOT rely on memorized Brick knowledge.
 Do NOT use hardcoded mappings as the primary decision source.
-Only use OCR cues such as base_id, measurement, unit, value and pipe_color to choose among classes that are supported by the retrieved knowledge.
+Only use OCR cues such as base_id, measurement, unit, value and pipe_colour to choose among classes that are supported by the retrieved knowledge.
 
 ALLOWED OUTPUT FIELDS FOR EACH MAPPING:
 - id
