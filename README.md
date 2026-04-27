@@ -58,12 +58,6 @@ This staged design makes the pipeline more auditable and easier to evaluate, sin
 - `bms_stage2_eval/`  
   Stage 2 evaluation assets.
 
-### Other folders
-- `Brick/`, `data/`  
-  Local ontology/documentation sources used during retrieval development.
-- `chroma_db/`  
-  Local Chroma vector store generated during retrieval indexing.
-
 ## Final Reported Setup
 
 The paper reports results for the following final setup:
